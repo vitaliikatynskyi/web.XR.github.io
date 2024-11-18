@@ -123,18 +123,16 @@ h1 {
 }
 
 #calculator {
-  width: auto;
-  height: auto;
-  padding: 1.5vh;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
   border: 5px solid #666666;
   border-radius: 15px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
 }
+
 
 .box {
   text-align:right;
