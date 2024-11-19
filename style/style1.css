@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background: linear-gradient( #d3ba879b,#e3c45397);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+  font-family: 'PT Serif', serif;
+}
+p{
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+}
+.g-linen{
+    height: 100px;
+}
+.centertexts{
+  text-align: center;
+}
+.iframe_box{
+    width: 50%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #383838;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+/*фон з картинкою на голвній сторінці*/
+#special-offer {
+    background-image: url('../image/фото!.jpeg');
+    height: 720px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+}
+#special-offer h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#special-offer p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+#special-offer .btn {
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #F0DB01; 
+    border: none;
+    border-radius: 5px;
+}
+
+#special-offer .btn:hover {
+    background-color: #8e8201;; 
+}
+
+/*фон з картинкою на голвній сторінці*/
+
+/*акції*/
+.box{
+    display: flexbox;
+    width: 300px;
+    height: auto;
+    position: relative; 
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+}
+#free_dish {
+    background-image: url('../image/nature1.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding:  200px; 
+}
+
+/*акції*/
+
+/*Меню*/
+
+/*Калькулятор*/
+.calculator_box {
+  background-color: #c890206b;  
+  width: 500px;
+    margin: 4% auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+}
+.calculator {
+    padding: 20px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+  }
+  
+  .input {
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 2.5rem;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
+  }
+  
+  .input:hover {
+    border: 1px solid #c890206b;
+    -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .operators div {
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+    background-color: #c890206b;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  }
+  
+  .operators div:hover {
+    background-color: #c485086b;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #aaa;
+  }
+  
+  .operators div:active {
+    font-weight: bold;
+  }
+  
+  .leftPanel {
+    display: inline-block;
+  }
+  
+  .numbers div {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    width: 80px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 4px 10px 0;
+    cursor: pointer;
+    background-color: #c890206b;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+  }
+  
+  .numbers div:hover {
+    background-color: #c78b136b;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+  }
+  
+  .numbers div:active {
+    font-weight: bold;
+  }
+  
+  div.equal {
+    display: inline-block;
+    border: 1px solid #3079ED;
+    border-radius: 1px;
+    width: 17%;
+    text-align: center;
+    padding: 127px 10px;
+    margin: 10px 6px 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #4d90fe;
+    transition: all .2s ease-in-out;
+  }
+  
+  div.equal:hover {
+    background-color: #307CF9;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #1857BB;
+  }
+  
+  div.equal:active {
+    font-weight: bold;
+  }
+ 
+/*Калькулятор*/
+/*опитаування*/
+#survey{
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #bb9e649b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#survey  button{
+  background-color: #cda95f9b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+#survey  button:hover{
+  background-color: #c88e1a9b;
+}
+
+
+#result {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+#result p {
+  margin-bottom: 10px;
+}
+/*опитаування*/
+ /*Меню*/
+
+ /*галерея*/
+ 
+ .video_box{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+ /*галерея*/
+
+ /*про нас*/
+
+.about_yorself  h2 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: 40px 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+.about_yorself  p {
+    font-size: 4.2em;
+    margin-bottom: 30px;
+    color: black;
+    text-shadow: 40px 40px 80px rgba(0, 0, 0, 0.8);
+}
+ /*про нас*/
+ 
+ /*tamimer*/
+ .taimer {
+ text-align: center;
+ font-family: sans-serif;
+ font-weight: 100;
+}
+
+.countdown-title {
+ color: #c58300;
+ font-weight: 100;
+ font-size: 40px;
+ margin: 40px 0px 20px;
+}
+
+.countdown {
+ font-family: sans-serif;
+ color: #fff;
+ display: inline-block;
+ font-weight: 100;
+ text-align: center;
+ font-size: 30px;
+}
+
+.countdown-number {
+ padding: 10px;
+ border-radius: 3px;
+ background: #c890206b;
+ display: inline-block;
+}
+
+.countdown-time {
+ padding: 15px;
+ border-radius: 3px;
+ background: #c7890e6b;
+ display: inline-block;
+}
+
+.countdown-text {
+ display: block;
+ padding-top: 5px;
+ font-size: 16px;
+}
+ /*tamimer*/
