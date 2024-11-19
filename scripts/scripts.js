@@ -1,5 +1,4 @@
-// калькулятор
-"use strict";
+
 var operators = ["+", "-", "/", "*"];
 
 var box = null;
@@ -437,7 +436,7 @@ function keyReleased(e){
         document.getElementById("backspace_btn").style.backgroundColor  = "#666666";
     }
 }
-//кадькулятор
+//калькулятор
 //опитування
 function submitSurvey() {
   var surveyForm = document.getElementById('surveyForm');
