@@ -113,9 +113,9 @@ header {
 /*акції*/
 /* Calculator */
 .calculator {
-  max-width: 300px;
+  max-width: 230px;
   margin: 0 auto;
-  background-color: #f8f9fa;
+  background-color: #789abc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -135,15 +135,15 @@ header {
 }
 
 .calc-btn {
-  background-color: #e9ecef;
+  background-color: #273b4e;
 }
 
 .calc-btn:hover {
-  background-color: #dee2e6;
+  background-color: #123d68;
 }
 
 .btn-warning {
-  color: white;
+  color: rgb(194, 65, 65);
 }
 /*Калькулятор*/
 /*опитаування*/

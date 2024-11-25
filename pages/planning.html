@@ -4,7 +4,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../style/style1.css">
-      <link rel="stylesheet" href="../style/calc_style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="shortcut icon" type="image/svg" href="../image/logoCO.svg">
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -205,74 +204,78 @@
           <!-- Minfin.com.ua banks informer 300x340 yellow-->
         <div class="g-linen"></div>
       <!-- Калькулятор -->
-         <div class="container mt-4"></div>
-         <div class="calculator card">
-            <div class="card-body">
-               <h3 class="card-title text-center">Калькулятор</h3>
-               <input type="text" id="display" class="form-control mb-2" onkeydown="handleKeyPress(event)">
-               <div class="row">
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('7')">7</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('8')">8</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('9')">9</button></div>
-                  <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('+')">+</button></div>
-               </div>
-               <div class="row mt-2">
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('4')">4</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('5')">5</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('6')">6</button></div>
-                  <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('-')">-</button></div>
-               </div>
-               <div class="row mt-2">
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('1')">1</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('2')">2</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('3')">3</button></div>
-                  <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('*')">×</button></div>
-               </div>
-               <div class="row mt-2">
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('0')">0</button></div>
-                  <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('.')">.</button></div>
-                  <div class="col-3"><button class="btn btn-danger w-100" onclick="clearDisplay()">C</button></div>
-                  <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('/')">/</button></div>
-               </div>
-               <div class="row mt-2">
-                  <div class="col-12"><button class="btn btn-primary w-100" onclick="calculate()">=</button></div>
+         <div class="container mt-4">
+            <div class="calculator card" style="max-width: 300px; margin: 0 auto;">
+               <div class="card-body">
+                  <h3 class="card-title text-center">Калькулятор</h3>
+                  <input type="text" id="display" class="form-control mb-2">
+                  <div class="row">
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('7')">7</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('8')">8</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('9')">9</button></div>
+                     <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('+')">+</button></div>
+                  </div>
+                  <div class="row mt-2">
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('4')">4</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('5')">5</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('6')">6</button></div>
+                     <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('-')">-</button></div>
+                  </div>
+                  <div class="row mt-2">
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('1')">1</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('2')">2</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('3')">3</button></div>
+                     <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('*')">×</button></div>
+                  </div>
+                  <div class="row mt-2">
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('0')">0</button></div>
+                     <div class="col-3"><button class="btn btn-light w-100 calc-btn" onclick="appendNumber('.')">.</button></div>
+                     <div class="col-3"><button class="btn btn-danger w-100" onclick="clearDisplay()">C</button></div>
+                     <div class="col-3"><button class="btn btn-warning w-100" onclick="appendOperator('/')">/</button></div>
+                  </div>
+                  <div class="row mt-2">
+                     <div class="col-12"><button class="btn btn-primary w-100" onclick="calculate()">=</button></div>
+                  </div>
                </div>
             </div>
          </div>
-        </div>
-        </div>
-         </div>
 
          <script>
-        let display = document.getElementById('display');
+         let display = document.getElementById('display');
 
-        function appendNumber(num) {
-        display.value += num;
-        }
+         function appendNumber(num) {
+               display.value += num;
+         }
 
-        function appendOperator(op) {
-        display.value += op;
-        }
+         function appendOperator(op) {
+               display.value += op;
+         }
 
-        function clearDisplay() {
-        display.value = '';
-        }
+         function clearDisplay() {
+               display.value = '';
+         }
 
-        function calculate() {
-        try {
-           display.value = eval(display.value);
-        } catch {
-           display.value = 'Error';
-        }
-        }
+         function calculate() {
+               try {
+                     display.value = eval(display.value);
+               } catch {
+                     display.value = 'Error';
+               }
+         }
 
-        function handleKeyPress(event) {
-        if (event.key === 'Enter') {
-           calculate();
-        } else if (event.key === 'Escape') {
-           clearDisplay();
-        }
-        }
+         // Add keyboard event listener
+         document.addEventListener('keydown', function(event) {
+               const key = event.key;
+               if (key >= '0' && key <= '9' || key === '.') {
+                     appendNumber(key);
+               } else if (['+', '-', '*', '/'].includes(key)) {
+                     appendOperator(key);
+               } else if (key === 'Enter') {
+                     calculate();
+               } else if (key === 'Escape') {
+                     clearDisplay();
+               }
+         });
          </script>
    <!--калькулятор-->
       <!--опитування-->
