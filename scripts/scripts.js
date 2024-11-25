@@ -448,8 +448,8 @@ function submitSurvey() {
 
   if (resultQuestion1 && resultQuestion2) {
       document.getElementById('resultheader').textContent = 'Результати опитування: ';
-      document.getElementById('resultQuestion1').textContent = 'Якість страв: ' + resultQuestion1.value;
-      document.getElementById('resultQuestion2').textContent = 'Робота персоналу: ' + resultQuestion2.value;
+      document.getElementById('resultQuestion1').textContent = 'Якість обслуговування: ' + resultQuestion1.value;
+      document.getElementById('resultQuestion2').textContent = 'Якість сайту: ' + resultQuestion2.value;
 
   } else {
       alert('Будь ласка, відповідайте на всі питання.');
