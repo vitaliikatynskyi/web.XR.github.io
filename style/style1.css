@@ -43,7 +43,7 @@ header {
 
 /*фон з картинкою на голвній сторінці*/
 #special-offer {
-    background-image: url('../image/фото!.jpeg');
+    background-image: url('../image/file1.jpg');
     height: 720px;
             background-size: cover;
             background-position: center;
@@ -53,23 +53,31 @@ header {
             text-align: center;
 }
 #special-offer h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 2.9em;
+  margin-bottom: 20px;
+  color: rgb(8, 5, 0);
+  background-color: rgba(218, 213, 206, 0.398);
+  display: inline-block;
+  padding: 9px;
+  width: auto;
 }
 
-#special-offer p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: white;
-}
+/* #special-offer p {
+  font-size: 1.9em;
+  margin-bottom: 30px;
+  color: rgb(187, 124, 66);
+  background-color: rgb(174, 125, 65);
+  display: table-column-group;
+  padding: 11px;
+  width: auto;
+} */
 
 #special-offer .btn {
     font-size: 1.5em;
     text-decoration: none;
     padding: 10px 20px;
     color: #fff;
-    background-color: #F0DB01; 
+    background-color: #a6a16c; 
     border: none;
     border-radius: 5px;
 }
