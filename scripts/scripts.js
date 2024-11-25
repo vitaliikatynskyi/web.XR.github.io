@@ -464,3 +464,33 @@ function book_table(){
     let time_book=prompt("Введіть час бронювання", "");
 		alert("Дані успішно введено:Ім'я "+ name + " прізвище: " +surname +" час "+time_book);
 }
+
+let display = document.getElementById('display');
+
+        function appendNumber(num) {
+        display.value += num;
+        }
+
+        function appendOperator(op) {
+        display.value += op;
+        }
+
+        function clearDisplay() {
+        display.value = '';
+        }
+
+        function calculate() {
+        try {
+           display.value = eval(display.value);
+        } catch {
+           display.value = 'Error';
+        }
+        }
+
+        function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+           calculate();
+        } else if (event.key === 'Escape') {
+           clearDisplay();
+        }
+        }

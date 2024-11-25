@@ -111,8 +111,40 @@ header {
 }
 
 /*акції*/
+/* Calculator */
+.calculator {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
+.calculator .btn {
+  font-size: 18px;
+  padding: 15px;
+  margin: 2px;
+}
 
+.calculator input {
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #c3dab8;
+}
+
+.calc-btn {
+  background-color: #e9ecef;
+}
+
+.calc-btn:hover {
+  background-color: #dee2e6;
+}
+
+.btn-warning {
+  color: white;
+}
 /*Калькулятор*/
 /*опитаування*/
 #survey{
