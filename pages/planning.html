@@ -61,57 +61,70 @@
                         <!-- Модальне вікно -->
                          <!-- Кнопка для відкриття модального вікна -->
                         <button class="open-modal-btn" onclick="openModal()">Залишити дані</button>
+<!-- Кнопка для відкриття модального вікна -->
+<button class="open-modal-btn" id="openModalBtn" onclick="openModal()" tabindex="0">Залишити дані</button>
 
-                        <!-- Модальне вікно -->
-                        <div id="myModal" class="modal">
-                           <div class="modal-content">
-                             <h2>Залиште свої дані</h2>
-                             <form id="contactForm">
-                               <label for="name">Ім'я:</label><br>
-                               <input type="text" id="name" name="name" required 
-                                 onkeypress="return /[а-яА-Яa-zA-Z\s]/.test(event.key)"><br><br>
-                               
-                               <label for="phone">Номер телефону:</label><br>
-                               <input type="tel" id="phone" name="phone" required 
-                                 onkeypress="return /[0-9+]/.test(event.key)" 
-                                 pattern="\+?[0-9]{10,13}" 
-                                 placeholder="+380XXXXXXXXX"><br><br>
-                               
-                               <button type="submit" class="close-modal-btn">Надіслати дані</button>
-                             </form>
-                           </div>
-                        </div>
+<!-- Модальне вікно -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>Залиште свої дані</h2>
+        <form id="contactForm">
+            <label for="name">Ім'я:</label><br>
+            <input type="text" id="name" name="name" required 
+                pattern="[А-Яа-яA-Za-z\s]+" 
+                title="Використовуйте лише літери та пробіли"><br><br>
 
-                        <script>
-                           document.addEventListener('DOMContentLoaded', function() {
-                             window.openModal = function() {
-                               document.getElementById('myModal').style.display = 'block';
-                               document.getElementById('name').focus();
-                             };
+            <label for="phone">Номер телефону:</label><br>
+            <input type="tel" id="phone" name="phone" required 
+                pattern="\+?[0-9]{10,13}" 
+                title="Введіть номер у форматі +380XXXXXXXXX"
+                placeholder="+380XXXXXXXXX"><br><br>
 
-                             function closeModal() {
-                               document.getElementById('myModal').style.display = 'none';
-                               document.getElementById('contactForm').reset();
-                             }
+            <button type="submit" class="close-modal-btn">Надіслати дані</button>
+        </form>
+    </div>
+</div>
 
-                             document.getElementById('contactForm').onsubmit = function(event) {
-                               event.preventDefault();
-                               const name = document.getElementById('name').value;
-                               const phone = document.getElementById('phone').value;
-                               if (phone.length < 10) {
-                                 alert('Введіть коректний номер телефону');
-                                    return;
-                                 }
-                                 alert('Дані надіслано:\nІм\'я: ' + name + '\nТелефон: ' + phone);
-                                 closeModal();
-                              };
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        window.openModal = function() {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('name').focus();
+        };
 
-                              document.addEventListener('keydown', function(event) {
-                                 if (event.key === 'Escape') {
-                                    closeModal();
-                                 }
-                              });
-                           });
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('contactForm').reset();
+        }
+
+        document.getElementById('contactForm').onsubmit = function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            if (phone.length < 10) {
+                alert('Введіть коректний номер телефону');
+                return;
+            }
+            alert('Дані надіслано:\nІм\'я: ' + name + '\nТелефон: ' + phone);
+            closeModal();
+        };
+
+        // Додаємо обробник подій для клавіатури
+        document.addEventListener('keydown', function(event) {
+            // Закриття модального вікна при натисканні клавіші "Escape"
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Автоматичний фокус на кнопці після заповнення останнього поля
+        document.getElementById('phone').addEventListener('input', function() {
+            if (this.value.length >= 10) {
+                document.querySelector('.close-modal-btn').focus();
+            }
+        });
+    });
+</script>
                         </script>
                      </div>
                   </div>
