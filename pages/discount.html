@@ -48,9 +48,11 @@
                <div class="card mb-6">
                   <img src="../image/vine_bottle.jpg" class="card-img-top" alt="Перша знижка">
                   <div class="card-body">
-                     <h3 class="card-title">Пляжка вина на день народження</h3>
-                     <p class="card-text">Приходячи святкувати у день вашого народження або 6 днів після, ви гарантовано отримаєте пляшку вина в подарунок.</p>
-                     <p class="card-text">Тільки у Смаковитому оазисі </p>
+                     <h3 class="card-title">Знижка до 10% на обрані квартири!
+                        Придбайте квартиру та отримайте приємну знижку. Обирайте з найкращих варіантів житла з вигідними умовами.
+                        </h3>
+                     <p class="card-text">.</p>
+                     <p class="card-text">Тільки у Будмайстер </p>
                   </div>
                </div>
             </div>
@@ -59,8 +61,9 @@
                   <img src="../image/10знижка.jpg" class="card-img-top" alt="друга знижка">
                   <div class="card-body">
                      <h3 class="card-title">10% знижка</h3>
-                     <p class="card-text">Даруємо 10% знижку, кожному десятому відвідувачу, на будт-яку страву, яку забажає відвідувач.</p>
-                     <p class="card-text">Тільки у Смаковитому оазисі </p>
+                     <p class="card-text">Безвідсоткове розтермінування на 12 місяців!
+                        Мріяти про власну квартиру ще простіше! Розтермінування без відсотків на цілий рік для зручної оплати..</p>
+                     <p class="card-text">Тільки у Будмайстер </p>
                   </div>
                </div>
             </div>
@@ -68,8 +71,8 @@
       </div>
       <div class="g-linen"></div>
       <div class="container text-center">
-         <h2>Безплатна кава!</h2>
-         <p>Кожного понеділка ми даруємо безплатну каву кожному відвідувачу, який завітає до нас у проміжок між 9:00 і 11:00</p>
+         <h2>Запрошуємо в наш офіс на чашку кави!</h2>
+         <p></p>
          <div class="row">
             <div class="col-md-6">
                <div class="box">
@@ -104,9 +107,9 @@
       <div class="container text-center ">
          <div class="row">
             <div class="col-md-6">
-               <h2>Безкоштовна страва за підписку на наші соціальні мережі</h2>
+               <h2>Підписуйся в соціальних мережах !</h2>
                <p>
-                  Підписавшись на будб-які наші соціальні мережі і показавши це офіціанту, ви можете замовити одну страва у подарунок.<br>
+                  Отримуй знижку 5% на оформлення документів,звертайся до ниших юристів , вони допоможуть швидко та якісно вирішити будь які питання.<br>
                <div class="g-linen"></div>
                <!-- Посилання на Instagram -->
                <a class="btn btn-outline-danger" href="https://www.instagram.com" target="_blank">
@@ -139,32 +142,77 @@
                </p>
             </div>
             <div class="col-md-6">
-               <img src="../image/free_dish.jpg" class="img-fluid" alt="безкоштовна страва">
+               <img src="../image/free_dish.jpg" class="img-fluid" alt="фото1">
             </div>
          </div>
       </div>
       </div>
-      <div class="taimer">
-         <h1 class="countdown-title">Акція  закінчується</h1>
-         <div id="countdown" class="countdown">
-            <div class="countdown-number">
-               <span class="days countdown-time"></span>
-               <span class="countdown-text">Дні</span>
-            </div>
-            <div class="countdown-number">
-               <span class="hours countdown-time"></span>
-               <span class="countdown-text">Години</span>
-            </div>
-            <div class="countdown-number">
-               <span class="minutes countdown-time"></span>
-               <span class="countdown-text">Хвилини</span>
-            </div>
-            <div class="countdown-number">
-               <span class="seconds countdown-time"></span>
-               <span class="countdown-text">Секунди</span>
-            </div>
+      <div class="text-center">
+      <h1 class="countdown-title">Розіграш закінчується через</h1>
+      
+      <div id="countdown" class="countdown">
+         <div class="countdown-number">
+            <span class="days countdown-time"></span>
+            <span class="countdown-text">Дні</span>
+         </div>
+         <div class="countdown-number">
+            <span class="hours countdown-time"></span>
+            <span class="countdown-text">Години</span>
+         </div>
+         <div class="countdown-number">
+            <span class="minutes countdown-time"></span>
+            <span class="countdown-text">Хвилини</span>
+         </div>
+         <div class="countdown-number">
+            <span class="seconds countdown-time"></span>
+            <span class="countdown-text">Секунди</span>
          </div>
       </div>
+   </div>
+   <script>
+      function getTimeRemaining(endtime) {
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+       'total': t,
+       'days': days,
+       'hours': hours,
+       'minutes': minutes,
+       'seconds': seconds
+      };
+      }
+      
+      function initializeClock(id, endtime) {
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+      
+      function updateClock() {
+       var t = getTimeRemaining(endtime);
+      
+       daysSpan.innerHTML = t.days;
+       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+       minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+       secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+      
+       if (t.total <= 0) {
+         clearInterval(timeinterval);
+       }
+      }
+      
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+      }
+      
+      var deadline = new Date("2025-01-01T00:00:00"); 
+      initializeClock('countdown', deadline);
+   
+   </script>
       <div class="g-linen"></div>
       <footer class="bg-dark text-white text-center py-3">
          <p>&copy; 2024 Будмайстер. Усі права захищені.</p>
