@@ -101,7 +101,7 @@
       // Додаємо обробник введення для поля імені
       document.getElementById('name').addEventListener('keypress', function(e) {
          // Дозволяємо тільки літери
-         if (!(/^[a-zA-Zа-яА-ЯіІїЇєЄ\s]$/.test(e.key))) {
+         if (!/[a-zA-Zа-яА-ЯІіЇїЄєҐґЁё]/.test(e.key)) {
             e.preventDefault();
          }
       });
