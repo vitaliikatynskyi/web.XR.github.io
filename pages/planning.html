@@ -60,40 +60,52 @@
                         <p class="card-text"><strong>Ціна: $50400.99</strong></p>
                         <button class="open-modal-btn" onclick="openModal()">Купити</button>
                         <!-- Модальне вікно -->
-                        <div id="myModal" class="modal">
-                           <div class="modal-content">
-                              <h2>Залиште свої дані</h2>
-                              <form id="contactForm">
-                                 <label for="name">Ім'я:</label><br>
-                                 <input type="text" id="name" name="name" required><br><br>
-                                 <label for="phone">Номер телефону:</label><br>
-                                 <input type="tel" id="phone" name="phone" required><br><br>
-                                 <button type="submit" class="close-modal-btn">Надіслати дані</button>
-                              </form>
-                           </div>
-                        </div>
-                     
-                        <script>
-                           // Функція для відкриття модального вікна
-                           function openModal() {
-                              document.getElementById('myModal').style.display = 'block';
-                           }
-                     
-                           // Функція для закриття модального вікна після надсилання даних
-                           document.getElementById('contactForm').onsubmit = function(event) {
-                              event.preventDefault(); // Відміняємо стандартну поведінку форми
-                              alert('Дані надіслано: ' + document.getElementById('name').value + ', ' + document.getElementById('phone').value);
-                              document.getElementById('myModal').style.display = 'none';
-                           }
 
-                           // Додаємо обробник подій для клавіатури
-                           document.addEventListener('keydown', function(event) {
-                              if (event.key === 'Escape') {
-                                 document.getElementById('myModal').style.display = 'none';
-                              }
-                           });
-                        </script>
-                        </script>
+    <!-- Кнопка для відкриття модального вікна -->
+    <button class="open-modal-btn" onclick="openModal()">Залишити дані</button>
+
+    <!-- Модальне вікно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2>Залиште свої дані</h2>
+            <form id="contactForm">
+                <label for="name">Ім'я:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="phone">Номер телефону:</label><br>
+                <input type="tel" id="phone" name="phone" required><br><br>
+                <button type="submit" class="close-modal-btn">Надіслати дані</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функція для відкриття модального вікна
+            window.openModal = function() {
+                document.getElementById('myModal').style.display = 'block';
+                document.getElementById('name').focus();
+            };
+
+            // Функція для закриття модального вікна
+            function closeModal() {
+                document.getElementById('myModal').style.display = 'none';
+            }
+
+            // Обробник подій для форми
+            document.getElementById('contactForm').onsubmit = function(event) {
+                event.preventDefault();
+                alert('Дані надіслано: ' + document.getElementById('name').value + ', ' + document.getElementById('phone').value);
+                closeModal();
+            };
+
+            // Обробник подій для клавіатури
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
                      </div>
                   </div>
                </div>
