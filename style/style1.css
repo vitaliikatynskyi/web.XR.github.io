@@ -257,8 +257,8 @@ header {
         /* Стилі для кнопки */
         .open-modal-btn {
             padding: 10px 20px;
-            background-color: #e4e119;
-            color: white;
+            background-color:#d3ba879b;
+            color: rgb(144, 6, 6);
             border: none;
             cursor: pointer;
             font-size: 16px;
@@ -267,30 +267,30 @@ header {
         /* Стилі для модального вікна */
         .modal {
             display: none; /* Сховане за замовчуванням */
-            position: fixed;
-            z-index: 1;
+            position: absolute;
+            z-index: 0;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
+            overflow: 90px;
+            background-color: #d3ba87b0;
         }
 
         /* Стилі для контенту модального вікна */
         .modal-content {
-            background-color: #fefefe;
+            background-color: #d3ba87b0;
             margin: 15% auto;
             padding: 20px;
-            border: 1px solid #888;
-            width: 300px;
+            border: 1px solid #d3ba87b0;
+            width: 30px;
             text-align: center;
         }
 
         /* Стилі для кнопки закриття модального вікна */
         .close-modal-btn {
-            background-color: #deb00b;
-            color: white;
+            background-color: #d3ba87b0;
+            color: rgb(19, 16, 16);
             border: none;
             padding: 10px 20px;
             cursor: pointer;
