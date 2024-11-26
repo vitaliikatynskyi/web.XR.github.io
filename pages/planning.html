@@ -58,7 +58,42 @@
                         <p class="card-text">Висота стелі: 2.70 метра</p>
                         <p class="card-text">Кількість кімнат: 1 </p>
                         <p class="card-text"><strong>Ціна: $50400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
+                        <!-- Модальне вікно -->
+                        <div id="myModal" class="modal">
+                           <div class="modal-content">
+                              <h2>Залиште свої дані</h2>
+                              <form id="contactForm">
+                                 <label for="name">Ім'я:</label><br>
+                                 <input type="text" id="name" name="name" required><br><br>
+                                 <label for="phone">Номер телефону:</label><br>
+                                 <input type="tel" id="phone" name="phone" required><br><br>
+                                 <button type="submit" class="close-modal-btn">Надіслати дані</button>
+                              </form>
+                           </div>
+                        </div>
+                     
+                        <script>
+                           // Функція для відкриття модального вікна
+                           function openModal() {
+                              document.getElementById('myModal').style.display = 'block';
+                           }
+                     
+                           // Функція для закриття модального вікна після надсилання даних
+                           document.getElementById('contactForm').onsubmit = function(event) {
+                              event.preventDefault(); // Відміняємо стандартну поведінку форми
+                              alert('Дані надіслано: ' + document.getElementById('name').value + ', ' + document.getElementById('phone').value);
+                              document.getElementById('myModal').style.display = 'none';
+                           }
+
+                           // Додаємо обробник подій для клавіатури
+                           document.addEventListener('keydown', function(event) {
+                              if (event.key === 'Escape') {
+                                 document.getElementById('myModal').style.display = 'none';
+                              }
+                           });
+                        </script>
+                        </script>
                      </div>
                   </div>
                </div>
@@ -72,7 +107,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат: 2 </p>
                         <p class="card-text"><strong>Ціна: $50400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -86,7 +121,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат: 2 </p>
                         <p class="card-text"><strong>Ціна: $50400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -104,7 +139,7 @@
                         <p class="card-text">Кількість кімнат: 3 </p>
                         <p class="card-text">Тераса:13.94м² </p>
                         <p class="card-text"><strong>Ціна: $120500.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -117,8 +152,9 @@
                         <p class="card-text">Висота стелі: 2.70 метра</p>
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат:</p>
-                        <p class="card-text"><strong>Ціна: $85400.99
-                        </strong></p><a href="#" class="btn btn-primary">Купити</a>
+                        <p class="card-text"><strong>Ціна: $85400.99</strong></p>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
+
                      </div>
                   </div>
                </div>
@@ -132,7 +168,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат:</p>
                         <p class="card-text"><strong>Ціна: $64400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -149,7 +185,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат: 1 </p>
                         <p class="card-text"><strong>Ціна: $45400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -163,7 +199,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат:2 </p>
                         <p class="card-text"><strong>Ціна: $66400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
@@ -177,7 +213,7 @@
                         <p class="card-text">Тип: Квартира</p>
                         <p class="card-text">Кількість кімнат: 1 </p>
                         <p class="card-text"><strong>Ціна: $40400.99</strong></p>
-                        <a href="#" class="btn btn-primary">Купити</a>
+                        <button class="open-modal-btn" onclick="openModal()">Купити</button>
                      </div>
                   </div>
                </div>
