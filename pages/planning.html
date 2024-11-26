@@ -60,50 +60,59 @@
                         <p class="card-text"><strong>Ціна: $50400.99</strong></p>
                         <!-- Модальне вікно -->
                          <!-- Кнопка для відкриття модального вікна -->
-                         <button class="open-modal-btn" onclick="openModal()">Залишити дані</button>
+                        <button class="open-modal-btn" onclick="openModal()">Залишити дані</button>
 
-    <!-- Модальне вікно -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <h2>Залиште свої дані</h2>
-            <form id="contactForm">
-                <label for="name">Ім'я:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="phone">Номер телефону:</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br>
-                <button type="submit" class="close-modal-btn">Надіслати дані</button>
-            </form>
-        </div>
-    </div>
+                        <!-- Модальне вікно -->
+                        <div id="myModal" class="modal">
+                           <div class="modal-content">
+                             <h2>Залиште свої дані</h2>
+                             <form id="contactForm">
+                               <label for="name">Ім'я:</label><br>
+                               <input type="text" id="name" name="name" required 
+                                 onkeypress="return /[а-яА-Яa-zA-Z\s]/.test(event.key)"><br><br>
+                               
+                               <label for="phone">Номер телефону:</label><br>
+                               <input type="tel" id="phone" name="phone" required 
+                                 onkeypress="return /[0-9+]/.test(event.key)" 
+                                 pattern="\+?[0-9]{10,13}" 
+                                 placeholder="+380XXXXXXXXX"><br><br>
+                               
+                               <button type="submit" class="close-modal-btn">Надіслати дані</button>
+                             </form>
+                           </div>
+                        </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Функція для відкриття модального вікна
-            window.openModal = function() {
-                document.getElementById('myModal').style.display = 'block';
-                document.getElementById('name').focus();
-            };
+                        <script>
+                           document.addEventListener('DOMContentLoaded', function() {
+                             window.openModal = function() {
+                               document.getElementById('myModal').style.display = 'block';
+                               document.getElementById('name').focus();
+                             };
 
-            // Функція для закриття модального вікна
-            function closeModal() {
-                document.getElementById('myModal').style.display = 'none';
-            }
+                             function closeModal() {
+                               document.getElementById('myModal').style.display = 'none';
+                               document.getElementById('contactForm').reset();
+                             }
 
-            // Обробник подій для форми
-            document.getElementById('contactForm').onsubmit = function(event) {
-                event.preventDefault();
-                alert('Дані надіслано: ' + document.getElementById('name').value + ', ' + document.getElementById('phone').value);
-                closeModal();
-            };
+                             document.getElementById('contactForm').onsubmit = function(event) {
+                               event.preventDefault();
+                               const name = document.getElementById('name').value;
+                               const phone = document.getElementById('phone').value;
+                               if (phone.length < 10) {
+                                 alert('Введіть коректний номер телефону');
+                                    return;
+                                 }
+                                 alert('Дані надіслано:\nІм\'я: ' + name + '\nТелефон: ' + phone);
+                                 closeModal();
+                              };
 
-            // Обробник подій для клавіатури
-            document.addEventListener('keydown', function(event) {
-                if (event.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        });
-    </script>
+                              document.addEventListener('keydown', function(event) {
+                                 if (event.key === 'Escape') {
+                                    closeModal();
+                                 }
+                              });
+                           });
+                        </script>
                      </div>
                   </div>
                </div>
