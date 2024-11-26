@@ -83,6 +83,7 @@
         function openModal() {
             document.getElementById('myModal').style.display = 'block';
         }
+        
         // Функція для закриття модального вікна після надсилання даних
         document.getElementById('contactForm').onsubmit = function(event) {
             event.preventDefault(); // Відміняємо стандартну поведінку форми
@@ -101,7 +102,7 @@
       // Додаємо обробник введення для поля імені
       document.getElementById('name').addEventListener('keypress', function(e) {
          // Дозволяємо тільки літери
-         if (!/[a-zA-Zа-яА-ЯІіЇїЄєҐґЁё]/.test(e.key)) {
+         if (!/[a-zA]/.test(e.key)) {
             e.preventDefault();
          }
       });
