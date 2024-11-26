@@ -257,7 +257,7 @@ header {
         /* Стилі для кнопки */
         .open-modal-btn {
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #e4e119;
             color: white;
             border: none;
             cursor: pointer;
@@ -289,7 +289,7 @@ header {
 
         /* Стилі для кнопки закриття модального вікна */
         .close-modal-btn {
-            background-color: #4CAF50;
+            background-color: #deb00b;
             color: white;
             border: none;
             padding: 10px 20px;
