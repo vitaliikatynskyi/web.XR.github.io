@@ -64,8 +64,9 @@
             <h2>Залиште свої дані</h2>
             <form id="contactForm">
                 <label for="name">Ім'я:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-
+               <input type="text" id="name" name="name" required><br><br>
+               <label for="email">Електронна пошта:</label><br>
+               <input type="email" id="email" name="email" required><br><br>
                <label for="phone">Номер телефону:</label><br>
                 <input type="tel" id="phone" name="phone" required><br><br>
 
@@ -75,46 +76,28 @@
     </div>
 
     <script>
-        // Функція для відкриття модального вікна
-        function openModal() {
-            document.getElementById('myModal').style.display = 'block';
-        }
-        
-        // Функція для закриття модального вікна після надсилання даних
-        document.getElementById('contactForm').onsubmit = function(event) {
-            event.preventDefault(); // Відміняємо стандартну поведінку форми
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            alert('Дані надіслано: ' + name + ', ' + phone);
-            closeModal();
-        };
-      // Закриття модального вікна при кліку поза його межами
+      // Modal functionality
+      function openModal() {
+         document.getElementById('myModal').style.display = 'block';
+      }
+
+      function closeModal() {
+         document.getElementById('myModal').style.display = 'none';
+      }
+
+      // Close modal when clicking outside of it
       window.onclick = function(event) {
          if (event.target == document.getElementById('myModal')) {
             closeModal();
          }
-      };
+      }
 
-      // Додаємо обробник введення для поля імені
-      document.getElementById('name').addEventListener('keypress', function(e) {
-         // Дозволяємо тільки літери
-         if (!/[a-zA]/.test(e.key)) {
-            e.preventDefault();
-         }
+      // Form submission
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+         event.preventDefault();
+         alert('Дані надіслані!');
+         closeModal();
       });
-        // Функція для закриття модального вікна
-        function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
-            document.getElementById('contactForm').reset(); // Скидання полів форми
-        }
-
-        // Додаємо обробник подій для клавіатури
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-
-        });
     </script> 
                      </div>
                   </div>
