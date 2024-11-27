@@ -255,52 +255,49 @@ header {
 }
  /*tamimer*/
         /* Стилі для кнопки */
-        .open-modal-btn {
-            padding: 10px 20px;
-            background-color:#d3ba879b;
-            color: rgb(144, 6, 6);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        /* Стилі для контенту модального вікна */
-        .modal-content {
-            background-color: #d3ba87b0;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #d3ba87b0;
-            width: 30px;
-            text-align: center;
-        }
+       .open-modal-btn {
+    padding: 10px 20px;
+    background-color: #d3ba879b;
+    color: rgb(144, 6, 6);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        /* Стилі для кнопки закриття модального вікна */
-        .close-modal-btn {
-            background-color: #d3ba87b0;
-            color: rgb(19, 16, 16);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-        }
-        .modal {
-          display: none;
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0,0,0,0.5);
-          z-index: 1000; /* Важно для отображения поверх других элементов */
-      }
-      
-      .modal-content {
-          background-color: rgba(210, 191, 191, 0); 
-          margin: 15% auto;
-          padding: 20px;
-          width: 80%;
-          max-width: 500px;
-          position: relative;
-          z-index: 1001;
-      }
+/* Стилі для модального вікна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемнення фону */
+    z-index: 1000; /* Відображення поверх інших елементів */
+}
+
+/* Стилі для контенту модального вікна */
+.modal-content {
+    background-color: #fff; /* Встановлено білий фон для читабельності */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #d3ba87b0;
+    width: 80%; /* Адаптивна ширина */
+    max-width: 500px; /* Максимальна ширина */
+    border-radius: 10px; /* Заокруглення кутів */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для покращення вигляду */
+    text-align: center;
+    z-index: 1001; /* Зміст завжди поверх затемнення */
+}
+
+/* Стилі для кнопки закриття модального вікна */
+.close-modal-btn {
+    background-color: #d3ba87b0;
+    color: rgb(19, 16, 16);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
