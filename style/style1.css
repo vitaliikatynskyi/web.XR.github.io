@@ -301,56 +301,46 @@ header {
     margin-top: 10px;
     border-radius: 5px;
 }
-/* Додаємо стиль для анімаційного блоку */
-.animated-text {
-  font: 400 1em/1.5 "Neuton";
-  color: rgb(36, 13, 13);
-  text-align: center;
-  margin: 0;
+
+
+*{
+  box-sizing: border-box;
+}
+body {
+  padding: 0%;
+}
+.container {
+  overflow: hidden; 
+}
+.is-animated {
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 0;
   position: relative;
-  padding: 20px;
+  background-color: rgba(133, 102, 130, 0);
 }
-
-.animated-text p {
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  display: inline-block;
-  border: 4px double rgb(133, 37, 37);
-  border-width: 4px 0;
-  padding: 1.5em 0;
-  position: relative;
-  width: 40em;
-  margin: 20px auto;
+.is-animated span {
+  display: table-caption;
 }
-
-.animated-text p span {
-  font: 700 4em/1 "Oswald", sans-serif;
-  letter-spacing: 0;
-  padding: 0.25em 0 0.325em;
-  display: block;
-  margin: 0 auto;
-  text-shadow: 0 0 80px rgb(196, 49, 49);
-
-  /* Clip Background Image */
-  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* Animate Background Image */
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: aitf 80s linear infinite;
-
-  /* Activate hardware acceleration for smoother animations */
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
+.property {
+  font-size: 260%;
+  text-align: right;
+  border-right: 1px solid #120404;
+  width:0px;
+  overflow: hidden;
+  float: left;
+  white-space: nowrap;
+  -webkit-animation-name: expandProperty;
+  -webkit-animation-delay: .2s;
+  -webkit-animation-duration: .5s; 
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
 }
-
-/* Animate Background Image */
-@-webkit-keyframes aitf {
-  0% {
-    background-position: 50% 50%;
+@-webkit-keyframes expandProperty {
+  from {
+    width: 0px;
   }
-  100% {
-    background-position: 100% 50%;
-  }
+  to {
+    width: 1291px;
+}
 }
